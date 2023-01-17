@@ -102,6 +102,7 @@ while maze3[x][y] != 1:
     for i in range(len(dir)):  # 이동 방향의 개수로 나눠 나머지를 구해서 다음 방향을 결정
         # 진행 방향의 오른쪽부터 순서대로 탐험
         j = (d + i - 1) % len(dir)
+        print("i=", i, "d=", d, "d+i = ", d+i, "d+i-1=",d+i-1, "j=",j, "x=", x, "y=", y)
 
         if maze3[x + dir[j][0]][y + dir[j][1]] < 2:
             # 방문하지 않은 경우에는 진행하여 이동 횟수를 늘림

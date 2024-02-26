@@ -11,5 +11,3 @@ while True:
 
     result = comb(n, k)
     print(result)
-
-

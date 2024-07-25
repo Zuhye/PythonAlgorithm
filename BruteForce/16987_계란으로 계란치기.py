@@ -10,6 +10,10 @@ answer = 0
 
 def dfs(n, cnt):
     global answer
+
+    if answer >= (cnt + (N - n) * 2):  # 끝까지 진행해도 정답 갱신 불가능 한 경우
+        return
+
     if n == N:  # 종료 조건: 모든 계란을 손에 들고 부딪침
         answer = max(answer, cnt)
         return

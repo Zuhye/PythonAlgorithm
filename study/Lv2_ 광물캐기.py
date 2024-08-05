@@ -12,7 +12,6 @@ def solution(picks, minerals):
         temp = minerals[i:i + 5]
         cnt = Counter(temp)
         result.append((cnt['diamond'], cnt['iron'], cnt['stone']))
-
     result.sort(reverse=True)  # 다이아가 많은 순으로 정렬
 
     for a, b, c in result:

@@ -9,13 +9,12 @@ dir = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 
 def bfs(x, y):
-
     for d in range(4):
         nx = x + dir[d][0]
         ny = y + dir[d][1]
 
         if 0 <= nx < R and 0 <= ny < C:
-            if board[nx][ny] == "S":
+            if board[nx][ny] == "S":  # 바로 옆이 양이면 울타리 못침
                 return False
             if board[nx][ny] == ".":
                 board[nx][ny] = "D"
@@ -32,7 +31,7 @@ for i in range(R):
                 print(0)
                 break
 
-if flag == True:
+if flag:
     print(1)
     for i in board:
         print(''.join(i))

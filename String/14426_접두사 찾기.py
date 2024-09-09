@@ -1,5 +1,6 @@
 import sys
 from bisect import bisect_left
+from collections import deque
 
 input = sys.stdin.readline
 

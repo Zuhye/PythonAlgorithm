@@ -11,7 +11,7 @@ answer = 0
 
 # 1. 숫자 순열
 for perm in permutations(nums):
-
+    print(perm)
     # 2. * 위치 선택 (조합)
     for comb in combinations(range(N - 1), X):
         op = ['+'] * (N - 1)
